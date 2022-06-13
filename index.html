@@ -13,19 +13,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="css/custom.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Home | Muhammad Daffa</title>
 </head>
 
 <body>
     <!-- NAV START -->
     <button onclick="topFunction()"
-        class="transition ease-in hover:-translate-y-1 hidden fixed bottom-5 right-10 sm:bottom-10 sm:right-20 z-50 border-0 outline-0 cursor-pointer rounded-full bg-slate-50 p-4 hover:bg-slate-100 text-[#2185D5]"
+        class="animate-bounce transition ease-in hover:-translate-y-1 hidden fixed bottom-5 right-10 sm:bottom-10 sm:right-20 z-50 border-0 outline-0 cursor-pointer rounded-full bg-slate-50 p-4 hover:bg-slate-100 text-[#2185D5]"
         id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     <div class="h-screen scroll-smooth">
 
         <div class="flex sticky top-0 backdrop-blur-sm bg-black opacity-100">
-            <div class="flex items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
+            <div class="flex sticky top-0 items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
                 <div
                     class="links flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
                     <a href="#home"
@@ -45,15 +48,28 @@
         </div>
         <!-- NAV END -->
         <!-- HEADER START -->
-        <div id="home"
-            class="h-[100vh] text-[#fff] flex flex-col justify-center items-center bg-[url('assets/img/header-bg.gif')] bg-black bg-no-repeat bg-center bg-cover opacity-50">
-            <p class="text-4xl sm:text-6xl font-dosis tracking-widest p-4 font-bold">
-                Hi, I'm
-                <span class="">Daffa</span>
+        <div id="home" class="h-[100vh] text-[#fff] flex flex-col justify-center items-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(img/header-bg.gif); background-size: cover;">
+            <p class="text-3xl sm:text-5xl font-dosis tracking-widest p-4 font-bold">
+                Hello there <span class="wave">👋</span>
             </p>
-            <p class="text-left font-dosis uppercase text-xs tracking-widest">
-                I’m a software developer
-            </p>
+            <div id="typer" class="text-2xl sm:text-3xl text-left font-dosis uppercase text- tracking-widest">
+                <script>
+                    var app = document.getElementById('typer');
+
+                    var typewriter = new Typewriter(app, {
+                        loop: true,
+                        delay: 30
+                    });
+
+                    typewriter.pauseFor(2500)
+                        .typeString('I am Daffa. ')
+                        .pauseFor(1000)
+                        .typeString('I\'m a Software Developer.')
+                        .pauseFor(5000)
+                        .start();
+                </script>
+            </div>
         </div>
         <!-- HEADER END -->
         <!-- BODY START -->
@@ -110,7 +126,7 @@
         </div>
         <!-- BODY END -->
         <!-- BOD LOWER -->
-        <div id="contact" class="sm:h-full flex justify-center items-center flex-col bg-[#fff] text-[#5463FF]">
+        <div id="contact" class="sm:h-full flex justify-center items-center flex-col bg-black text-[#5463FF]">
             <div class="w-2/4">
                 <p class="text-4xl sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold">Get In Touch.</p>
                 <hr class="text-[#548CFF]">

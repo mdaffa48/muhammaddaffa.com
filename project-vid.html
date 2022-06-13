@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/82eb69e53c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <link href="css/rvslider.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Projects</title>
+</head>
+
+<body>
+    <!-- NAV START -->
+    <button onclick="topFunction()"
+        class="transition ease-in hover:-translate-y-1 hidden fixed bottom-5 right-10 sm:bottom-10 sm:right-20 z-50 border-0 outline-0 cursor-pointer rounded-full bg-slate-50 p-4 hover:bg-slate-100 text-[#2185D5]"
+        id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="flex sticky top-0 backdrop-blur-sm bg-[#34B3F1] ">
+        <div class="flex items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
+            <div
+                class="links flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
+                <a href="index.html"
+                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
+                        class="fa-solid fa-house p-2"></i>HOME</a>
+                <a href="#about"
+                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
+                        class="fa-solid fa-user p-2"></i>ABOUT ME</a>
+                <a href="#contact"
+                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
+                        class="fa-solid fa-phone p-2"></i>CONTACT</a>
+                <a href="projects.html"
+                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
+                        class="fa-solid fa-arrow-left p-2"></i>GO BACK</a>
+            </div>
+        </div>
+    </div>
+    <div class="rvs-container mt-10 mb-10">
+
+        <div class="rvs-item-container">
+            <div class="rvs-item-stage">
+
+                <!-- The below is a single item, simply duplicate this layout for each item -->
+                <div class="rvs-item" style="background-image: url(LARGE_IMAGE_URL)">
+                    <p class="rvs-item-text">VIDEO_TITLE <small>by VIDEO_CREDITS</small></p>
+                    <a href="VIDEO_URL" class="rvs-play-video"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rvs-nav-container">
+            <a class="rvs-nav-prev"></a>
+            <div class="rvs-nav-stage">
+
+                <!-- The below is the corresponding nav item for the single item, simply duplicate this layout for each item -->
+                <a class="rvs-nav-item">
+                    <span class="rvs-nav-item-thumb" style="background-image: url(SMALL_IMAGE_URL)"></span>
+                    <h4 class="rvs-nav-item-title">VIDEO_TITLE</h4>
+                    <small class="rvs-nav-item-credits">by VIDEO_CREDITS</small>
+                </a>
+
+            </div>
+            <a class="rvs-nav-next"></a>
+        </div>
+
+    </div>
+    <!-- FOOTER START -->
+    <div class="bg-[#2185D5] text-[#fff] font-dosis flex p-16">
+        <div class="w-1/2">
+            <p class="text-center text-sm  md:text-lg">&copy; 2020 - 2022</p>
+        </div>
+        <div class="w-1/2">
+            <p class="text-center text-sm md:text-lg">Designed and made with <i
+                    class="fa-solid fa-heart text-red-600"></i> by <a class="text-teal-300 font-patrick"
+                    href="https://github.com/REGEX777">regex</a></p>
+        </div>
+    </div>
+    <!-- FOOTER END -->
+</body>
+<script src="front.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Responsive Video Slider JS -->
+<script src="js/rvslider.min.js"></script>
+<script>
+    jQuery(function ($) {
+        $('.rvs-container').rvslider();
+    });
+</script>

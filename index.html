@@ -25,12 +25,13 @@
     <button onclick="topFunction()"
         class="animate-bounce transition ease-in hover:-translate-y-1 hidden fixed bottom-5 right-10 sm:bottom-10 sm:right-20 z-50 border-0 outline-0 cursor-pointer rounded-full bg-slate-50 p-4 hover:bg-slate-100 text-[#2185D5]"
         id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
     <div class="h-screen scroll-smooth">
 
-        <div class="flex sticky top-0 backdrop-blur-sm bg-black opacity-100">
+        <nav class="flex sticky top-0 backdrop-blur-sm bg-black drop-shadow opacity-100">
             <div class="flex sticky top-0 items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
                 <div
-                    class="links flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
+                    class="links sticky top-0 flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
                     <a href="#home"
                         class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
                             class="fa-solid fa-house p-2"></i>HOME</a>
@@ -45,10 +46,10 @@
                             class="fa-solid fa-cube p-2"></i>MINECRAFTFOLIO</a>
                 </div>
             </div>
-        </div>
+        </nav>
         <!-- NAV END -->
         <!-- HEADER START -->
-        <div id="home" class="h-[100vh] text-[#fff] flex flex-col justify-center items-center"
+        <div id="home" class="min-h-[100vh] text-[#fff] flex flex-col justify-center items-center"
             style="background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(img/header-bg.gif); background-size: cover;">
             <p class="text-3xl sm:text-5xl font-dosis tracking-widest p-4 font-bold">
                 Hello there <span class="wave">👋</span>
@@ -73,55 +74,18 @@
         </div>
         <!-- HEADER END -->
         <!-- BODY START -->
-        <div id="about" class="mid 2xl:h-full flex justify-center items-center flex-col bg-[#2185D5] text-[#fff]">
+        <div id="about" class="h-screen mid min-h-[100vh] 2xl:h-full flex justify-center items-center bg-white text-black">
             <div class="w-2/4">
-                <p class="text-4xl sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold">About Me!</p>
+                <p class="text-4xl flex-col sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold">About Me!</p>
                 <hr class="text-[#548CFF]">
                 <br>
                 <p class="text-center font-dosis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque velit
                     aliquam
                     tempore necessitatibus voluptatem, corrupti porro expedita, inventore ipsam, harum libero. Earum
-                    minima molestias soluta voluptas. Voluptatum iusto facilis maxime.</p>
-                <br>
-                <hr>
-                <br>
-                <p class="font-dosis font-bold tracking-[4px] text-3xl text-center p-4">Languages I Can Code In.</p>
-                <br>
-                <div class="lg:flex lg:flex-row gap-10 justify-center items-center">
-                    <div
-                        class="shadow-lg border-2 border-[#5463FF] lg:w-2/6 bg-[#fff] text-[#303841] flex flex-col justify-center items-center rounded-lg">
-                        <div class="p-4">
-                            <p class="font-dosis font-bold tracking-[4px] sm:text-3xl text-center p-4">HTML</p>
-                            <hr>
-                            <br>
-                            <p class="text-center p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
-                    <br>
-                    <div
-                        class="shadow-lg border-2 border-[#5463FF] w-auto lg:w-2/6 bg-[#fff] text-[#303841] flex flex-col justify-center items-center rounded-lg">
-                        <div class="p-4">
-                            <p class="font-dosis font-bold tracking-[4px] sm:text-xl sm:3xl text-center p-4">JAVASCRIPT
-                            </p>
-                            <hr>
-                            <br>
-                            <p class="text-center p-2 sm:text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. </p>
-                        </div>
-                    </div>
-                    <br>
-                    <div
-                        class="shadow-lg border-2 border-[#5463FF] lg:w-2/6 bg-[#fff] text-[#303841] flex flex-col justify-center items-center rounded-lg">
-                        <div class="p-4">
-                            <p class="font-dosis font-bold tracking-[4px] sm:text-3xl text-center p-4">JAVA</p>
-                            <hr>
-                            <br>
-                            <p class="text-center p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
-                </div>
+                    minima molestias soluta voluptas. Voluptatum iusto facilis maxime.
+                </p>
             </div>
-            <br>
+           
 
         </div>
         <!-- BODY END -->

@@ -28,10 +28,10 @@
 
     <div class="h-screen scroll-smooth">
 
-        <nav class="flex sticky top-0 backdrop-blur-sm bg-black drop-shadow opacity-100">
-            <div class="flex sticky top-0 items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
+        <nav class="flex sticky top-0 z-50 backdrop-blur-sm bg-black drop-shadow opacity-100">
+            <div class="flex top-0 items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
                 <div
-                    class="links sticky top-0 flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
+                    class="links top-0 flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
                     <a href="#home"
                         class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
                             class="fa-solid fa-house p-2"></i>HOME</a>
@@ -74,23 +74,66 @@
         </div>
         <!-- HEADER END -->
         <!-- BODY START -->
-        <div id="about" class="h-screen mid min-h-[100vh] 2xl:h-full flex justify-center items-center bg-white text-black">
-            <div class="w-2/4">
-                <p class="text-4xl flex-col sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold">About Me!</p>
-                <hr class="text-[#548CFF]">
-                <br>
-                <p class="text-center font-dosis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque velit
-                    aliquam
-                    tempore necessitatibus voluptatem, corrupti porro expedita, inventore ipsam, harum libero. Earum
-                    minima molestias soluta voluptas. Voluptatum iusto facilis maxime.
+        <div id="about" class="mid min-h-[100vh] 2xl:h-full flex flex-col justify-center items-center bg-white text-black">
+            <div class="w-3/4">
+                <p class="text-[#5463FF] text-2xl flex-col sm:text-2xl font-dosis tracking-widest p-6 text-center font-bold uppercase">
+                    About
                 </p>
+                <p class="text-4xl flex-col sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold uppercase">More About Me!</p>
+                <br>
+                <br>
+                <div class="md:flex flex-row justify-center items-center">
+                    <div class="md:w-2/4">
+                        <!-- <p class="text-3xl font-bold">Hey There</p> -->
+                        <p class="text-3xl pb-2">Hey There!</p>
+                        <p class="text-2xl text-left font-dosis md:w-4/6">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Itaque velit
+                            aliquam
+                            tempore necessitatibus voluptatem, corrupti porro expedita, inventore ipsam, harum libero.
+                            Earum
+                            minima molestias soluta voluptas. Voluptatum iusto facilis maxime.
+                        </p>
+                        <br>
+                        <p class="text-2xl text-left font-dosis md:w-4/6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore nisi voluptates
+                            temporibus sed at corporis, consequatur necessitatibus quo doloribus fugit a voluptatum
+                            eaque earum, consequuntur similique nesciunt praesentium quos.
+                        </p>
+                        <br>
+                        <br>
+                        <a href="#" class="transition ease-in p-4 bg-[#5463FF] text-white border-2 border-black uppercase font-semibold hover:bg-[#525ff1]"><i class="fa-brands fa-github pr-2"></i>My Github!</a>
+                        
+                        <a href="#" class="transition ease-in p-4 bg-[#5463FF] text-white border-2 border-black uppercase font-semibold"><i class="fa-solid fa-screwdriver-wrench pr-2"></i>Hire me</a>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="tracking md:w-2/4">
+                        <p class="text-3xl font-bold uppercase">My Experience</p>
+                        <br>
+                        <ul>
+                            <p class="text-2xl uppercase font-bold p-2">Java</p>
+                            <li class="w-full bg-slate-300 mb-10">
+                                <div class="h-[4px] bg-black w-[40%]"></div>
+                            </li>
+                            <p class="text-2xl uppercase font-bold p-2">Javascript</p>
+                            <li class="w-full bg-slate-300 mb-10">
+                                <div class="h-[4px] bg-black w-[60%]"></div>
+                            </li>
+                            <p class="text-2xl uppercase font-bold p-2">Html</p>
+                            <li class="w-full bg-slate-300 mb-10">
+                                <div class="h-[4px] bg-black w-[20%]"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                </div>
+
             </div>
-           
 
         </div>
         <!-- BODY END -->
         <!-- BOD LOWER -->
-        <div id="contact" class="sm:h-full flex justify-center items-center flex-col bg-black text-[#5463FF]">
+        <div id="contact" class="flex justify-center items-center flex-col bg-black text-[#5463FF]">
             <div class="w-2/4">
                 <p class="text-4xl sm:text-6xl font-dosis tracking-widest p-6 text-center font-bold">Get In Touch.</p>
                 <hr class="text-[#548CFF]">
@@ -105,31 +148,57 @@
                 <br>
                 <p class="font-dosis font-bold tracking-[4px] text-3xl text-center p-4">Contact Me!</p>
                 <br>
+                <br>
+                <br>
                 <div>
                     <form action="">
-                        <div class="lg:flex lg:flex-row gap-10 justify-center items-center">
+                        <div class="md:flex flex-row gap-10">
+                            <!-- form side -->
                             <div class="lg:w-1/2">
-                                <input type="text" class="w-full p-2 border-2 border-[#5463FF] rounded-lg"
-                                    placeholder="Name">
+                                <div class="lg:w-[400px]">
+                                    <input type="text"
+                                        class="bg-transparent w-full p-2 border-2 border-[#5463FF] rounded-lg"
+                                        placeholder="Name">
+                                </div>
+                                <br>
+                                <div class="lg:w-[400px]">
+                                    <input type="text"
+                                        class="bg-transparent w-full p-2 border-2 border-[#5463FF] rounded-lg"
+                                        placeholder="Email">
+                                </div>
+                                <br>
+                                <div class="lg:w-[400px]">
+                                    <input type="text"
+                                        class="bg-transparent w-full p-2 border-2 border-[#5463FF] rounded-lg"
+                                        placeholder="Subject">
+                                </div>
+                                <br>
+                                <div class="lg:w-[400px]">
+                                    <input type="text"
+                                        class="bg-transparent w-full p-2 border-2 border-[#5463FF] rounded-lg"
+                                        placeholder="Message">
+                                </div>
                             </div>
+                            <!-- form side end -->
                             <br>
-                            <div class="lg:w-1/2">
-                                <input type="text" class="w-full p-2 border-2 border-[#5463FF] rounded-lg"
-                                    placeholder="Email">
+                            <div class="text-center text-white lg:text-left flex flex-col items-center justify-center">
+                                <div class="email">
+                                    <p class="text-l uppercase tracking-widest p-2"><i
+                                            class="fa-solid fa-envelope pr-2"></i>Email</p>
+
+                                    <p class="text-sm p-2">email@email.com</p>
+                                </div>
+                                <br>
+                                <div class="email">
+                                    <p class="text-l uppercase tracking-widest p-2"><i
+                                            class="fa-brands fa-discord pr-2"></i>Discord</p>
+
+                                    <p class="text-sm p-2">name#1234</p>
+                                </div>
                             </div>
                         </div>
                         <br>
-                        <div class="lg:flex lg:flex-row gap-10 justify-center items-center">
-                            <div class="lg:w-1/2">
-                                <input type="text" class="w-full p-2 border-2 border-[#5463FF] rounded-lg"
-                                    placeholder="Subject">
-                            </div>
-                            <br>
-                            <div class="lg:w-1/2">
-                                <input type="text" class="w-full p-2 border-2 border-[#5463FF] rounded-lg"
-                                    placeholder="Message">
-                            </div>
-                        </div>
+                        <br>
                         <br>
                         <div class="flex flex-row justify-center items-center gap-10">
                             <button
@@ -137,17 +206,35 @@
                                 Send Message</button>
                         </div>
                         <br>
+                        <br>
                     </form>
                 </div>
             </div>
         </div>
         <!-- BOD LOWER END -->
         <!-- FOOTER START -->
-        <div class="bg-[#2185D5] text-[#fff] font-dosis flex p-16">
-            <div class="w-1/2">
-                <p class="text-center text-sm  md:text-lg">&copy; 2020 - 2022</p>
+        <div class="bg-[#2185D5] text-[#fff] font-dosis flex flex-col justify-center items-center p-16">
+            <div class="w-1/2 flex justify-center items-center p-5">
+                <p class="text-5xl font-bold uppercase">Daffa</p>
+            </div>
+            <div class="flex flex-row pb-5">
+                <ul class="flex text-sm uppercase tracking-widest">
+                    <li class="inline-block after:content-['|'] after:text-black after:p-4">
+                        <i class="fa-solid fa-house p-2"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="inline-block after:content-['|'] after:text-black after:p-4">
+                        <i class="fa-solid fa-user p-2"></i>
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="inline-block">
+                        <i class="fa-solid fa-phone p-2"></i>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
             <div class="w-1/2">
+                <p class="text-center text-sm  md:text-lg">&copy; 2020 - 2022</p>
                 <p class="text-center text-sm md:text-lg">Designed and made with <i
                         class="fa-solid fa-heart text-red-600"></i> by <a class="text-teal-300 font-patrick"
                         href="https://github.com/REGEX777">regex</a></p>

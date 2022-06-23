@@ -21,32 +21,26 @@
 <body>
     <!-- NAV START -->
     <button onclick="topFunction()"
-        class="transition ease-in hover:-translate-y-1 hidden fixed bottom-5 right-10 sm:bottom-10 sm:right-20 z-50 border-0 outline-0 cursor-pointer rounded-full bg-slate-50 p-4 hover:bg-slate-100 text-[#2185D5]"
+        class="animate-bounce transition ease-in hover:-translate-y-1 hidden fixed bottom-5 right-10 sm:bottom-10 sm:right-20 z-50 border-0 outline-0 cursor-pointer rounded-full bg-blue-600 p-4 hover:bg-slate-100 text-white"
         id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
-    <div class="flex sticky top-0 backdrop-blur-sm bg-[#34B3F1] ">
-        <div class="flex items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
+
+    <nav class="flex fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black drop-shadow opacity-100">
+        <div class="flex top-0 items-center align-bottom pl-1 pr-1 w-full h-16 text-[#fff] justify-center">
             <div
-                class="links flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
-                <a href="index.html"
-                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
-                        class="fa-solid fa-house p-2"></i>HOME</a>
-                <a href="#about"
-                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
-                        class="fa-solid fa-user p-2"></i>ABOUT ME</a>
-                <a href="#contact"
-                    class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
-                        class="fa-solid fa-phone p-2"></i>CONTACT</a>
-                <a href="projects.html"
+                class="links top-0 flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
+                <a href="minecraftfolio.html"
                     class="inline-block relative after:content-[''] after:absolute after:w-[100%] after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-[#2185D5] after:origin-bottom-right after:transition after:duration-[0.25s] after:ease-out hover:after:scale-x-[1] hover:after:origin-bottom-left"><i
                         class="fa-solid fa-arrow-left p-2"></i>GO BACK</a>
             </div>
         </div>
-    </div>
+    </nav>
+    <!-- NAV END -->
+    <br>
+    <br>
+    <br>
     <div class="rvs-container mt-10 mb-10">
-
         <div class="rvs-item-container">
             <div class="rvs-item-stage">
-
                 <!-- The below is a single item, simply duplicate this layout for each item -->
                 <div class="rvs-item" style="background-image: url(LARGE_IMAGE_URL)">
                     <p class="rvs-item-text">VIDEO_TITLE <small>by VIDEO_CREDITS</small></p>
@@ -55,7 +49,6 @@
 
             </div>
         </div>
-
         <div class="rvs-nav-container">
             <a class="rvs-nav-prev"></a>
             <div class="rvs-nav-stage">
@@ -70,17 +63,33 @@
             </div>
             <a class="rvs-nav-next"></a>
         </div>
-
     </div>
+    <br>
     <!-- FOOTER START -->
-    <div class="bg-[#2185D5] text-[#fff] font-dosis flex p-16">
-        <div class="w-1/2">
-            <p class="text-center text-sm  md:text-lg">&copy; 2020 - 2022</p>
+    <div class="bg-[#000] text-[#fff] font-dosis flex flex-col justify-center items-center p-16">
+        <div class="w-1/2 flex justify-center items-center p-5">
+            <p class="text-5xl font-bold uppercase">Daffa</p>
+        </div>
+        <div class="flex flex-row pb-5">
+            <ul class="flex text-sm uppercase tracking-widest">
+                <li class="inline-block after:content-['|'] after:text-white after:p-4">
+                    <a href="https://discord.muhammaddaffa.com" target="_blank"><i
+                            class="fa-brands fa-discord p-2"></i>Discord Server</a>
+                </li>
+                <li class="inline-block after:content-['|'] after:text-white after:p-4">
+                    <a href="https://www.paypal.com/paypalme/mdaffa48" target="_blank"><i
+                            class="fa-brands fa-paypal p-2"></i>Donate</a>
+                </li>
+                <li class="inline-block">
+                    <a href="https://github.com/mdaffa48" target="_blank"><i
+                            class="fa-brands fa-github p-2"></i>GitHub</a>
+                </li>
+            </ul>
         </div>
         <div class="w-1/2">
-            <p class="text-center text-sm md:text-lg">Designed and made with <i
-                    class="fa-solid fa-heart text-red-600"></i> by <a class="text-teal-300 font-patrick"
-                    href="https://github.com/REGEX777">regex</a></p>
+            <p class="text-center text-sm  md:text-lg">Copyright &copy; 2022</p>
+            <!-- <p class="text-center text-sm">Original design made by <a class="text-teal-300 font-patrick"
+                href="https://github.com/REGEX777">regex</a></p> -->
         </div>
     </div>
     <!-- FOOTER END -->

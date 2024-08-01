@@ -3,14 +3,15 @@ import { useEffect } from "react";
 import { FadeImage } from "../ui/FadeImg";
 import { FadeText } from "../ui/FadeText";
 import { tabs } from "../../data/data";
-import { cn } from "../../lib/utils";
 
 export default function Works() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const handleActiveTab = (id: number) => {
     const tab = tabs.find((tab) => tab.id === id);
-    setActiveTab(tab);
+    if (tab) {
+      setActiveTab(tab);
+    }
   };
 
   useEffect(() => {

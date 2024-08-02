@@ -29,13 +29,7 @@ export default function Works() {
 
       {/* Mobile */}
       <section className="w-full space-y-36 md:hidden">
-        <div className="titles text-left space-y-2 px-4">
-          <h1 className="unbounded text-white text-4xl">ikhlasdansantai</h1>
-          <h2 className="manrope text-white text-base font-light tracking-wider">Frontend Engineer & Mobile Developer</h2>
-        </div>
-
         <div id="work-wrappers">
-          <p className="text-white text-lg pl-4">Works</p>
           <div className="bg-gradient-to-r from-[#0e474d] from-0% to-[#853637] to-100% pb-10 mt-4">
             <div className="content__titles text-white space-y-32 relative z-20">
               {tabs.map((tab) => (
@@ -75,7 +69,6 @@ export default function Works() {
               ))}
             </div>
           </div>
-          <p className="text-white text-lg pl-4 mt-10">hi@ikhlasdansantai.dev</p>
         </div>
       </section>
 
@@ -138,9 +131,6 @@ export default function Works() {
           </div>
         </div>
       </section>
-      <p id="email__mobile" className="text-white/85 text-lg pl-4 mt-10 md:hidden">
-        ikhlasdansantai
-      </p>
 
       <div className="contact__info absolute left-6 bottom-4 flex items-center gap-3">
         <figure className="flex items-center text-white/85 text-lg gap-2">

@@ -2,6 +2,10 @@ import saicoMask from '../assets/img/saico_mask.mp4';
 import playerBillboard from '../assets/img/player_billboard.png';
 import boosterSets from '../assets/img/booster_sets.mp4';
 import chunkCollector from '../assets/img/chunk_collector.mp4';
+import pets from '../assets/img/pets.mp4';
+import rottenCrops from '../assets/img/rotten_crops.mp4';
+import nextGens from '../assets/img/nextgens.png';
+import itemSkins from '../assets/img/itemskins.jpeg';
 
 export const tabs = [
   {
@@ -61,6 +65,66 @@ export const tabs = [
         alt: "Chunk Collector Plugin",
         href: "",
         description: "An ultra-lightweight chunk collector plugin that automatically gathers drops from mobs. Featuring an autosell function, this collector can hold an unlimited amount of items, providing a seamless and enriched experience for players.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Pets",
+    content: [
+      {
+        id: 5,
+        title: "Pets",
+        tags: ["smp", "survival", "exciting", "grinding"],
+        img: pets,
+        alt: "Pets Plugin",
+        href: "",
+        description: "A craftable pets with unique abilities designed to aid player progression. Players can equip up to 3 pets simultaneously and enjoy a variety of toggleable options to customize their experience.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Haunted Crops",
+    content: [
+      {
+        id: 6,
+        title: "Haunted Crops",
+        tags: ["smp", "survival", "exciting", "mechanics", "challenging"],
+        img: rottenCrops,
+        alt: "Haunted Crops Plugin",
+        href: "",
+        description: "Haunted Crops plugin, bringing an exciting challenge to players and transforming the ordinary Minecraft farming activity into a thrilling experience.",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "NextGens",
+    content: [
+      {
+        id: 7,
+        title: "NextGens",
+        tags: ["tycoon", "roblox", "exciting", "gameplay", "gamemodes"],
+        img: nextGens,
+        alt: "NextGens plugin",
+        href: "https://www.spigotmc.org/resources/nextgens-minecraft-gens-tycoon-plugin.111857/",
+        description: "Introducing the NextGens plugin, inspired by the popular tycoon gamemode from Roblox. Offering a variety of unique features, this exclusive addition sets a new standard for engaging and dynamic gameplay, showcasing the best experience available in the market.",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "ItemSkins",
+    content: [
+      {
+        id: 8,
+        title: "ItemSkins",
+        tags: ["cosmetics", "eula friendly", "exciting", "unique"],
+        img: itemSkins,
+        alt: "ItemSkins plugin",
+        href: "https://www.spigotmc.org/resources/itemskins-switch-your-items-texture.97459/",
+        description: "ItemSkins is a revolutionary plugin that uses custom model data to provide a seamless and user-friendly experience for your players. This plugin works by manipulating the custom model data of items, which means that when a player changes the skin of an item, we can alter the custom model data to reflect that change, transferring data such as nbt tags, and enchantments to prevent data loss from the item.",
       },
     ],
   },

@@ -47,7 +47,7 @@ export default function WorksMobileView({ tabs, activeTab, handleNextTab, handle
                   text={activeTab.content[0].description}
                 />
                 {content.href.length > 0 &&
-                  <a href={content.href} className="text-white/80 hover:underline hover:text-white transition duration-150">
+                  <a href={content.href} target="_blank" className="text-white/80 hover:underline hover:text-white transition duration-150">
                     <FadeText
                       direction="up"
                       framerProps={{

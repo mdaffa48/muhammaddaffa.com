@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { FadeImage } from "../ui/FadeImg";
-import { FadeText } from "../ui/FadeText";
 import { tabs } from "../../data/data";
 import WorksMobileView from "../layouts/WorksMobileView";
 import WorksDesktopView from "../layouts/WorksDesktopView";

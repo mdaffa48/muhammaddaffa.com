@@ -1,181 +1,66 @@
+import saicoMask from '../assets/img/saico_mask.mp4';
+import playerBillboard from '../assets/img/player_billboard.png';
+import boosterSets from '../assets/img/booster_sets.mp4';
+import chunkCollector from '../assets/img/chunk_collector.mp4';
+
 export const tabs = [
   {
     id: 1,
-    title: "Landing Page",
+    title: "SaicoPvP's Mask",
     content: [
       {
         id: 1,
-        title: "Landing Page",
-        tags: ["html", "css", "js"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Landing Page",
+        title: "SaicoPvP's Mask",
+        tags: ["faction", "rpg", "fantasy", "exciting"],
+        img: saicoMask,
+        alt: "SaicoPvP's Mask Plugin",
         href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos. ",
+        description: "A premium replica of the SaicoPvP's Mask plugin, featuring 41 unique mask types and 4 distinct rarities. Completed with a mask salvager feature that turns players' unused masks into fragments and a built-in shop system. Highly customizable plugin offers unparalleled flexibility and excitement for your server.",
       },
     ],
   },
   {
     id: 2,
-    title: "Youtube Short",
+    title: "Player Billboard",
     content: [
       {
         id: 2,
-        title: "Youtube Short",
-        tags: ["Youtube", "Short"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Youtube Short",
+        title: "Player Billboard",
+        tags: ["useful", "fun", "economy"],
+        img: playerBillboard,
+        alt: "Player Billboard Plugin",
         href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
+        description: "A sophisticated billboard plugin that allows players to rent specific slots for promotional activities using in-game currency. With a built-in timer, players can effortlessly customize the display name and lore for their advertisements, enhancing the gaming experience.",
       },
     ],
   },
   {
     id: 3,
-    title: "Motion Graphics",
+    title: "Booster Sets",
     content: [
       {
         id: 3,
-        title: "Motion Graphics",
-        tags: ["After effect", "Adobe premiere pro"],
-        img: "https://static.vecteezy.com/system/resources/thumbnails/001/857/005/small_2x/404-error-landing-page-template-free-vector.jpg",
-        alt: "Motion Graphics",
+        title: "Booster Sets",
+        tags: ["skyblock", "farming", "economy", "rpg", "fun", "grinding"],
+        img: boosterSets,
+        alt: "Booster Sets Plugin",
         href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
+        description: "A powerful booster plugin designed to accelerate player progression. With the ability to create unlimited booster sets and featuring 6 custom enchantments, this plugin also includes a built-in custom currency, offering unparalleled flexibility and excitement for your server.",
       },
     ],
   },
   {
     id: 4,
-    title: "Landing Page",
+    title: "Chunk Collector",
     content: [
       {
         id: 4,
-        title: "Landing Page",
-        tags: ["html", "css", "js"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Landing Page",
+        title: "Chunk Collector",
+        tags: ["skyblock", "farming", "economy", "useful", "grinding"],
+        img: chunkCollector,
+        alt: "Chunk Collector Plugin",
         href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos. ",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "Youtube Short",
-    content: [
-      {
-        id: 5,
-        title: "Youtube Short",
-        tags: ["Youtube", "Short"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Youtube Short",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Motion Graphics",
-    content: [
-      {
-        id: 6,
-        title: "Motion Graphics",
-        tags: ["After effect", "Adobe premiere pro"],
-        img: "https://static.vecteezy.com/system/resources/thumbnails/001/857/005/small_2x/404-error-landing-page-template-free-vector.jpg",
-        alt: "Motion Graphics",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: "Landing Page",
-    content: [
-      {
-        id: 7,
-        title: "Landing Page",
-        tags: ["html", "css", "js"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Landing Page",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos. ",
-      },
-    ],
-  },
-  {
-    id: 8,
-    title: "Youtube Short",
-    content: [
-      {
-        id: 8,
-        title: "Youtube Short",
-        tags: ["Youtube", "Short"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Youtube Short",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
-      },
-    ],
-  },
-  {
-    id: 9,
-    title: "Motion Graphics",
-    content: [
-      {
-        id: 9,
-        title: "Motion Graphics",
-        tags: ["After effect", "Adobe premiere pro"],
-        img: "https://static.vecteezy.com/system/resources/thumbnails/001/857/005/small_2x/404-error-landing-page-template-free-vector.jpg",
-        alt: "Motion Graphics",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
-      },
-    ],
-  },
-  {
-    id: 10,
-    title: "Landing Page",
-    content: [
-      {
-        id: 10,
-        title: "Landing Page",
-        tags: ["html", "css", "js"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Landing Page",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos. ",
-      },
-    ],
-  },
-  {
-    id: 11,
-    title: "Youtube Short",
-    content: [
-      {
-        id: 11,
-        title: "Youtube Short",
-        tags: ["Youtube", "Short"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
-        alt: "Youtube Short",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
-      },
-    ],
-  },
-  {
-    id: 12,
-    title: "Last Items",
-    content: [
-      {
-        id: 12,
-        title: "Last Items",
-        tags: ["After effect", "Adobe premiere pro"],
-        img: "https://static.vecteezy.com/system/resources/thumbnails/001/857/005/small_2x/404-error-landing-page-template-free-vector.jpg",
-        alt: "Motion Graphics",
-        href: "",
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos.",
+        description: "An ultra-lightweight chunk collector plugin that automatically gathers drops from mobs. Featuring an autosell function, this collector can hold an unlimited amount of items, providing a seamless and enriched experience for players.",
       },
     ],
   },

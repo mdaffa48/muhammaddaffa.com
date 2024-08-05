@@ -47,15 +47,17 @@ export default function WorksDesktopView({ tabs, activeTab, handleActiveTab }: a
                 }}
                 text={activeTab.content[0].description}
               />
-              <a href={content.href} className="text-white/80 hover:underline hover:text-white transition duration-150">
-                <FadeText
-                  direction="up"
-                  framerProps={{
-                    show: { transition: { delay: 0.5 } },
-                  }}
-                  text="see more"
-                />
-              </a>
+              {content.href.length > 0 &&
+                <a href={content.href} className="text-white/80 hover:underline hover:text-white transition duration-150">
+                  <FadeText
+                    direction="up"
+                    framerProps={{
+                      show: { transition: { delay: 0.5 } },
+                    }}
+                    text="see more"
+                  />
+                </a>
+              }
             </div>
           ))}
         </div>

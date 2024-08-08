@@ -48,7 +48,7 @@ export function FadeImage({
 
   return (
     <motion.div initial="hidden" animate="show" variants={FADE_ANIMATION_VARIANTS}>
-      <motion.img src={src} alt={alt} className={className} style={{ width: "100%", height: "100%", objectFit: "cover", translateY: directionOffset }} />
+      <motion.img src={src} alt={alt} className={className} style={{ width: "100%", height: "100%", objectFit: "contain", translateY: directionOffset }} />
     </motion.div>
   );
 }

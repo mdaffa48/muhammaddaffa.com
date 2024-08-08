@@ -54,7 +54,7 @@ export function FadeVideo({
 
   return (
     <motion.div initial="hidden" animate="show" variants={FADE_ANIMATION_VARIANTS} className={className}>
-      <motion.video src={src} poster={poster} controls={controls} autoPlay={autoPlay} loop={loop} className={className} style={{ width: "100%", height: "100%", objectFit: "cover", translateY: directionOffset }} />
+      <motion.video src={src} poster={poster} controls={controls} autoPlay={autoPlay} loop={loop} className={className} muted style={{ width: "100%", height: "100%", objectFit: "cover", translateY: directionOffset }} />
     </motion.div>
   );
 }

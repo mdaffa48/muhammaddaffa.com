@@ -1,5 +1,6 @@
 import { FadeImage } from "../ui/FadeImg";
 import { FadeText } from "../ui/FadeText";
+import { FadeVideo } from "../ui/FadeVideo";
 
 export default function WorksMobileView({ tabs, activeTab, handleNextTab, handlePrevTab }: any) {
   return (
@@ -17,7 +18,8 @@ export default function WorksMobileView({ tabs, activeTab, handleNextTab, handle
 
         <div className="new__wrapers mt-8">
           <figure className="rounded-lg overflow-hidden aspect-video relative">
-            <FadeImage key={activeTab.content[0].id} src={activeTab.content[0].img} alt="Example Image" className="fade-image" direction="up" />
+            {activeTab.content[0].video && <FadeVideo src={activeTab.content[0].video} key={activeTab.content[0].id} direction="up" controls autoPlay loop className="my-video-class" />}
+            {!activeTab.content[0].video && <FadeImage key={activeTab.content[0].id} src={activeTab.content[0].img} alt="Example Image" className="fade-image" direction="up" />}
             <div className="absolute inset-y-0 bottom-0 right-0 left-0  bg-gradient-to-t from-black  translate-y-28"></div>
           </figure>
           <div className="content__titles text-white space-y-2 pr-10 relative z-20 -translate-y-6">

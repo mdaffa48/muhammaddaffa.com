@@ -1,15 +1,18 @@
 import { useMemo } from "react";
 import { motion, Variants } from "framer-motion";
 
-type FadeImageProps = {
+type FadeVideoProps = {
   className?: string;
   direction?: "up" | "down" | "left" | "right";
   framerProps?: Variants;
   src: string;
-  alt: string;
+  poster?: string; // Optional: Image to show before the video loads
+  controls?: boolean;
+  autoPlay?: boolean;
+  loop?: boolean;
 };
 
-export function FadeImage({
+export function FadeVideo({
   direction = "up",
   className,
   framerProps = {
@@ -17,8 +20,11 @@ export function FadeImage({
     show: { opacity: 1, transition: { type: "spring" } },
   },
   src,
-  alt,
-}: FadeImageProps) {
+  poster,
+  controls = true,
+  autoPlay = false,
+  loop = false,
+}: FadeVideoProps) {
   const directionOffset = useMemo(() => {
     const map = { up: 10, down: -10, left: -10, right: 10 };
     return map[direction];
@@ -47,8 +53,8 @@ export function FadeImage({
   }, [directionOffset, axis, framerProps]);
 
   return (
-    <motion.div initial="hidden" animate="show" variants={FADE_ANIMATION_VARIANTS}>
-      <motion.img src={src} alt={alt} className={className} style={{ width: "100%", height: "100%", objectFit: "cover", translateY: directionOffset }} />
+    <motion.div initial="hidden" animate="show" variants={FADE_ANIMATION_VARIANTS} className={className}>
+      <motion.video src={src} poster={poster} controls={controls} autoPlay={autoPlay} loop={loop} className={className} style={{ width: "100%", height: "100%", objectFit: "cover", translateY: directionOffset }} />
     </motion.div>
   );
 }

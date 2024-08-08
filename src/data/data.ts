@@ -14,10 +14,10 @@ export const tabs = [
     content: [
       {
         id: 1,
-        title: "SaicoPvP's Mask",
-        tags: ["faction", "rpg", "fantasy", "exciting"],
-        img: saicoMask,
-        alt: "SaicoPvP's Mask Plugin",
+        title: "Landing Page Video",
+        tags: ["html", "css", "js"],
+        video: "https://www.w3schools.com/html/mov_bbb.mp4",
+        alt: "Landing Page",
         href: "",
         description: "A premium replica of the SaicoPvP's Mask plugin, featuring 41 unique mask types and 4 distinct rarities. Completed with a mask salvager feature that turns players' unused masks into fragments and a built-in shop system. Highly customizable plugin offers unparalleled flexibility and excitement for your server.",
       },

@@ -5,9 +5,9 @@ export const tabs = [
     content: [
       {
         id: 1,
-        title: "Landing Page",
+        title: "Landing Page Video",
         tags: ["html", "css", "js"],
-        img: "https://badoystudio.com/wp-content/uploads/2024/02/anatomi-landingpage-konversi-tinggi.webp",
+        video: "https://www.w3schools.com/html/mov_bbb.mp4",
         alt: "Landing Page",
         href: "",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, optio ab officia ullam ipsam quam impedit et placeat laboriosam quos. ",

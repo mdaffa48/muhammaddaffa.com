@@ -10,10 +10,10 @@ export const tabs = [
     content: [
       {
         id: 1,
-        title: "Landing Page Video",
+        title: "SaicoPvP's Mask",
         tags: ["html", "css", "js"],
-        video: "https://www.w3schools.com/html/mov_bbb.mp4",
-        alt: "Landing Page",
+        video: saicoMask,
+        alt: "SaicoPvP Mask Plugin",
         href: "",
         description:
           "A premium replica of the SaicoPvP's Mask plugin, featuring 41 unique mask types and 4 distinct rarities. Completed with a mask salvager feature that turns players' unused masks into fragments and a built-in shop system. Highly customizable plugin offers unparalleled flexibility and excitement for your server.",
@@ -60,7 +60,7 @@ export const tabs = [
         id: 4,
         title: "Chunk Collector",
         tags: ["skyblock", "farming", "economy", "useful", "grinding"],
-        img: chunkCollector,
+        video: chunkCollector,
         alt: "Chunk Collector Plugin",
         href: "",
         description:
@@ -76,7 +76,7 @@ export const tabs = [
         id: 5,
         title: "Pets",
         tags: ["smp", "survival", "exciting", "grinding"],
-        img: pets,
+        video: pets,
         alt: "Pets Plugin",
         href: "",
         description: "A craftable pets with unique abilities designed to aid player progression. Players can equip up to 3 pets simultaneously and enjoy a variety of toggleable options to customize their experience.",
@@ -91,7 +91,7 @@ export const tabs = [
         id: 6,
         title: "Haunted Crops",
         tags: ["smp", "survival", "exciting", "mechanics", "challenging"],
-        img: rottenCrops,
+        video: rottenCrops,
         alt: "Haunted Crops Plugin",
         href: "",
         description: "Haunted Crops plugin, bringing an exciting challenge to players and transforming the ordinary Minecraft farming activity into a thrilling experience.",

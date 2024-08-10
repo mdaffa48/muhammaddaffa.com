@@ -21,8 +21,6 @@ export default function WorksDesktopView({ tabs, activeTab, handleActiveTab }: a
         <figure className="rounded-lg overflow-hidden aspect-video relative z-10">
           {activeTab.content[0].video && <FadeVideo src={activeTab.content[0].video} key={activeTab.content[0].id} direction="up" controls autoPlay loop className="my-video-class" />}
           {!activeTab.content[0].video && <FadeImage key={activeTab.content[0].id} src={activeTab.content[0].img} alt="Example Image" className="fade-image" direction="up" />}
-
-          {/* <div className="absolute inset-y-0 bottom-0 right-0 left-0  bg-gradient-to-t from-black translate-y-36 pointer-events-none"></div> */}
         </figure>
         <div className="content__titles text-white space-y-2 pr-10 relative z-20 -translate-y-8">
           {activeTab.content.map((content) => (

@@ -1,11 +1,7 @@
-import saicoMask from '../assets/img/saico_mask.mp4';
-import playerBillboard from '../assets/img/player_billboard.png';
-import boosterSets from '../assets/img/booster_sets.mp4';
-import chunkCollector from '../assets/img/chunk_collector.mp4';
-import pets from '../assets/img/pets.mp4';
-import rottenCrops from '../assets/img/rotten_crops.mp4';
-import nextGens from '../assets/img/nextgens.png';
-import itemSkins from '../assets/img/itemskins.jpeg';
+import pets from "../assets/img/pets.mp4";
+import rottenCrops from "../assets/img/rotten_crops.mp4";
+import nextGens from "../assets/img/nextgens.png";
+import itemSkins from "../assets/img/itemskins.jpeg";
 
 export const tabs = [
   {
@@ -19,7 +15,8 @@ export const tabs = [
         video: saicoMask,
         alt: "SaicoPvP Mask Plugin",
         href: "",
-        description: "A premium replica of the SaicoPvP's Mask plugin, featuring 41 unique mask types and 4 distinct rarities. Completed with a mask salvager feature that turns players' unused masks into fragments and a built-in shop system. Highly customizable plugin offers unparalleled flexibility and excitement for your server.",
+        description:
+          "A premium replica of the SaicoPvP's Mask plugin, featuring 41 unique mask types and 4 distinct rarities. Completed with a mask salvager feature that turns players' unused masks into fragments and a built-in shop system. Highly customizable plugin offers unparalleled flexibility and excitement for your server.",
       },
     ],
   },
@@ -29,12 +26,13 @@ export const tabs = [
     content: [
       {
         id: 2,
-        title: "Player Billboard",
-        tags: ["useful", "fun", "economy"],
-        img: playerBillboard,
-        alt: "Player Billboard Plugin",
+        title: "Youtube Short",
+        tags: ["Youtube", "Short"],
+        img: "https://raw.githubusercontent.com/mdaffa48/muhammaddaffa.com/main/src/assets/img/player_billboard.png",
+        alt: "Youtube Short",
         href: "",
-        description: "A sophisticated billboard plugin that allows players to rent specific slots for promotional activities using in-game currency. With a built-in timer, players can effortlessly customize the display name and lore for their advertisements, enhancing the gaming experience.",
+        description:
+          "A sophisticated billboard plugin that allows players to rent specific slots for promotional activities using in-game currency. With a built-in timer, players can effortlessly customize the display name and lore for their advertisements, enhancing the gaming experience.",
       },
     ],
   },
@@ -44,12 +42,13 @@ export const tabs = [
     content: [
       {
         id: 3,
-        title: "Booster Sets",
-        tags: ["skyblock", "farming", "economy", "rpg", "fun", "grinding"],
-        video: boosterSets,
-        alt: "Booster Sets Plugin",
+        title: "Motion Graphics",
+        tags: ["After effect", "Adobe premiere pro"],
+        video: "https://www.w3schools.com/html/mov_bbb.mp4",
+        alt: "Motion Graphics",
         href: "",
-        description: "A powerful booster plugin designed to accelerate player progression. With the ability to create unlimited booster sets and featuring 6 custom enchantments, this plugin also includes a built-in custom currency, offering unparalleled flexibility and excitement for your server.",
+        description:
+          "A powerful booster plugin designed to accelerate player progression. With the ability to create unlimited booster sets and featuring 6 custom enchantments, this plugin also includes a built-in custom currency, offering unparalleled flexibility and excitement for your server.",
       },
     ],
   },
@@ -64,7 +63,8 @@ export const tabs = [
         video: chunkCollector,
         alt: "Chunk Collector Plugin",
         href: "",
-        description: "An ultra-lightweight chunk collector plugin that automatically gathers drops from mobs. Featuring an autosell function, this collector can hold an unlimited amount of items, providing a seamless and enriched experience for players.",
+        description:
+          "An ultra-lightweight chunk collector plugin that automatically gathers drops from mobs. Featuring an autosell function, this collector can hold an unlimited amount of items, providing a seamless and enriched experience for players.",
       },
     ],
   },
@@ -109,7 +109,8 @@ export const tabs = [
         img: nextGens,
         alt: "NextGens plugin",
         href: "https://www.spigotmc.org/resources/nextgens-minecraft-gens-tycoon-plugin.111857/",
-        description: "Introducing the NextGens plugin, inspired by the popular tycoon gamemode from Roblox. Offering a variety of unique features, this exclusive addition sets a new standard for engaging and dynamic gameplay, showcasing the best experience available in the market.",
+        description:
+          "Introducing the NextGens plugin, inspired by the popular tycoon gamemode from Roblox. Offering a variety of unique features, this exclusive addition sets a new standard for engaging and dynamic gameplay, showcasing the best experience available in the market.",
       },
     ],
   },
@@ -124,7 +125,8 @@ export const tabs = [
         img: itemSkins,
         alt: "ItemSkins plugin",
         href: "https://www.spigotmc.org/resources/itemskins-switch-your-items-texture.97459/",
-        description: "ItemSkins is a revolutionary plugin that uses custom model data to provide a seamless and user-friendly experience for your players. This plugin works by manipulating the custom model data of items, which means that when a player changes the skin of an item, we can alter the custom model data to reflect that change, transferring data such as nbt tags, and enchantments to prevent data loss from the item.",
+        description:
+          "ItemSkins is a revolutionary plugin that uses custom model data to provide a seamless and user-friendly experience for your players. This plugin works by manipulating the custom model data of items, which means that when a player changes the skin of an item, we can alter the custom model data to reflect that change, transferring data such as nbt tags, and enchantments to prevent data loss from the item.",
       },
     ],
   },

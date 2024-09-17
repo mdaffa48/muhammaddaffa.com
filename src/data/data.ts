@@ -1,6 +1,9 @@
+import saicoMask from "../assets/img/saico_mask.mp4";
 import pets from "../assets/img/pets.mp4";
+import boosterSets from "../assets/img/booster_sets.mp4";
 import rottenCrops from "../assets/img/rotten_crops.mp4";
 import nextGens from "../assets/img/nextgens.png";
+import chunkCollector from "../assets/img/chunk_collector.mp4";
 import itemSkins from "../assets/img/itemskins.jpeg";
 
 export const tabs = [
@@ -26,8 +29,8 @@ export const tabs = [
     content: [
       {
         id: 2,
-        title: "Youtube Short",
-        tags: ["Youtube", "Short"],
+        title: "Player Billboard",
+        tags: ["useful", "fun", "economy"],
         img: "https://raw.githubusercontent.com/mdaffa48/muhammaddaffa.com/main/src/assets/img/player_billboard.png",
         alt: "Youtube Short",
         href: "",
@@ -42,9 +45,9 @@ export const tabs = [
     content: [
       {
         id: 3,
-        title: "Motion Graphics",
-        tags: ["After effect", "Adobe premiere pro"],
-        video: "https://www.w3schools.com/html/mov_bbb.mp4",
+        title: "Booster Sets",
+        tags: ["skyblock", "farming", "economy", "rpg", "fun", "grinding"],
+        video: boosterSets,
         alt: "Motion Graphics",
         href: "",
         description:

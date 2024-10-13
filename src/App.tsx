@@ -1,7 +1,7 @@
 import "./App.css";
 import Meteors from "./components/ui/Meteor";
 import OrbitingCircles from "./components/ui/Orbit";
-import resume from "./assets/pdf/muhammaddaffa_cv_ats_plugin_dev.pdf";
+import resume from "./assets/pdf/resume_plugin.pdf";
 
 function App() {
   return (

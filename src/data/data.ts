@@ -14,7 +14,7 @@ export const tabs = [
       {
         id: 1,
         title: "SaicoPvP's Mask",
-        tags: ["html", "css", "js"],
+        tags: ["farming", "fun", "rpg", "grinding", "mythical"],
         video: saicoMask,
         alt: "SaicoPvP Mask Plugin",
         href: "",

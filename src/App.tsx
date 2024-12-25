@@ -12,11 +12,11 @@ function App() {
       <section className="min-h-[100dvh] flex flex-col items-center justify-center gap-10">
         <div className="titles text-center space-y-2">
           <h1 className="unbounded text-white text-5xl">muhammad daffa</h1>
-          <h2 className="manrope text-white text-xl md:text-2xl font-light tracking-wider">software developer</h2>
+          <h2 className="manrope text-white text-xl md:text-2xl font-light tracking-wider">minecraft java plugin developer</h2>
         </div>
         <div className="buttons space-x-6">
           <a href="/works" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
-            works
+            minecraft works
           </a>
           <a href={resume} target="_blank" rel="noopener noreferrer" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
             resume

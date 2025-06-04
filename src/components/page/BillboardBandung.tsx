@@ -78,9 +78,6 @@ const BillboardBandung: React.FC = () => {
     <main className="bg-gray-50 text-gray-800 font-serif min-h-screen">
       <header className="bg-blue-900 text-white py-6 mb-8">
         <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
-          <a href="/" className="text-lg" aria-label="Kembali ke halaman utama">
-            &#x2190; Beranda
-          </a>
           <h1 className="text-3xl font-bold text-center flex-1">
             Info Billboard Bandung
           </h1>
@@ -107,7 +104,7 @@ const BillboardBandung: React.FC = () => {
                   className="w-full h-48 object-cover rounded"
                 />
                 <a
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/62811249362?text=Halo%2C%20saya%20mengunjungi%20website%20Anda%20dan%20tertarik%20dengan%20billboard%20di%20Bandung.%20Saya%20ingin%20diskusi%20lebih%20lanjut.%20Terima%20kasih."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"

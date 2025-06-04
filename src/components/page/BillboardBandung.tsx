@@ -13,10 +13,10 @@ const billboards: Billboard[] = [
     id: 1,
     title: "Billboard Asia Afrika",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+1A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+1B",
+      "https://placehold.co/600x400?text=Billboard+1A",
+      "https://placehold.co/600x400?text=Billboard+1B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+1",
+    location: "https://placehold.co/600x400?text=Map+1",
     description:
       "Billboard strategis di kawasan Asia Afrika dengan lalu lintas padat.",
   },
@@ -24,10 +24,10 @@ const billboards: Billboard[] = [
     id: 2,
     title: "Billboard Dago",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+2A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+2B",
+      "https://placehold.co/600x400?text=Billboard+2A",
+      "https://placehold.co/600x400?text=Billboard+2B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+2",
+    location: "https://placehold.co/600x400?text=Map+2",
     description:
       "Terletak di jantung wisata Dago, cocok untuk promosi berbagai produk.",
   },
@@ -35,10 +35,10 @@ const billboards: Billboard[] = [
     id: 3,
     title: "Billboard Pasteur",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+3A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+3B",
+      "https://placehold.co/600x400?text=Billboard+3A",
+      "https://placehold.co/600x400?text=Billboard+3B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+3",
+    location: "https://placehold.co/600x400?text=Map+3",
     description:
       "Billboard dekat gerbang tol Pasteur, dilalui kendaraan luar kota.",
   },
@@ -46,52 +46,79 @@ const billboards: Billboard[] = [
     id: 4,
     title: "Billboard Setiabudi",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+4A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+4B",
+      "https://placehold.co/600x400?text=Billboard+4A",
+      "https://placehold.co/600x400?text=Billboard+4B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+4",
+    location: "https://placehold.co/600x400?text=Map+4",
     description:
       "Area ramai mahasiswa dan wisatawan dengan visibilitas tinggi.",
   },
 ];
 
 const BillboardBandung: React.FC = () => {
+  React.useEffect(() => {
+    document.title =
+      "Billboard Bandung - Informasi Lokasi dan Penyewaan Reklame";
+
+    const description =
+      "Daftar lokasi billboard strategis di Kota Bandung lengkap dengan foto dan peta. Hubungi kami untuk penyewaan media promosi.";
+    const meta = document.querySelector("meta[name='description']");
+    if (meta) {
+      meta.setAttribute("content", description);
+    } else {
+      const metaTag = document.createElement("meta");
+      metaTag.name = "description";
+      metaTag.content = description;
+      document.head.appendChild(metaTag);
+    }
+  }, []);
+
   return (
-    <main className="bg-[#131310] min-h-screen text-white pt-20 pb-10">
-      <div className="back__btn px-4 mb-6">
-        <a href="/" className="text-white/85 flex items-center gap-2">
-          <p className="text-lg">&#x2190; back</p>
-        </a>
-      </div>
-      <h1 className="unbounded text-center text-3xl mb-8">Billboard Bandung</h1>
-      <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2 px-4">
-        {billboards.map((b) => (
-          <div
-            key={b.id}
-            className="bg-white text-[#131310] rounded-lg shadow-md overflow-hidden"
-          >
-            <div className="grid grid-cols-2 gap-2 p-4">
-              {b.images.map((img, i) => (
+    <main className="bg-gray-50 text-gray-800 font-serif min-h-screen">
+      <header className="bg-blue-900 text-white py-6 mb-8">
+        <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
+          <a href="/" className="text-lg" aria-label="Kembali ke halaman utama">
+            &#x2190; Beranda
+          </a>
+          <h1 className="text-3xl font-bold text-center flex-1">
+            Info Billboard Bandung
+          </h1>
+        </div>
+      </header>
+      <section className="max-w-5xl mx-auto px-4 pb-12">
+        <p className="text-lg mb-8">
+          Temukan lokasi billboard yang tersedia di Bandung dan pilih tempat
+          terbaik untuk mempromosikan bisnis Anda.
+        </p>
+        <div className="grid gap-8 sm:grid-cols-2">
+          {billboards.map((b) => (
+            <article
+              key={b.id}
+              className="bg-white rounded-lg shadow-lg p-4 space-y-4"
+            >
+              <div className="grid gap-2 sm:grid-cols-2">
+                {b.images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`${b.title} ${i + 1}`}
+                    className="w-full h-40 object-cover rounded"
+                  />
+                ))}
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-2xl font-semibold">{b.title}</h2>
+                <p className="leading-relaxed">{b.description}</p>
                 <img
-                  key={i}
-                  src={img}
-                  alt={`${b.title} ${i + 1}`}
-                  className="h-32 w-full object-cover rounded"
+                  src={b.location}
+                  alt={`Peta lokasi ${b.title}`}
+                  className="w-full h-48 object-cover rounded"
                 />
-              ))}
-            </div>
-            <div className="p-4 space-y-3">
-              <h2 className="text-xl font-semibold">{b.title}</h2>
-              <p className="text-sm">{b.description}</p>
-              <img
-                src={b.location}
-                alt={`Lokasi ${b.title}`}
-                className="w-full h-40 object-cover rounded"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

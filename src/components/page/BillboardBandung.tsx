@@ -77,9 +77,6 @@ const BillboardBandung: React.FC = () => {
     <main className="bg-gray-50 text-gray-800 font-serif min-h-screen">
       <header className="bg-blue-900 text-white py-6 mb-8">
         <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
-          <a href="/" className="text-lg" aria-label="Kembali ke halaman utama">
-            &#x2190; Beranda
-          </a>
           <h1 className="text-3xl font-bold text-center flex-1">
             Info Billboard Bandung
           </h1>

@@ -2,7 +2,31 @@ import { FadeImage } from "../ui/FadeImg";
 import { FadeText } from "../ui/FadeText";
 import { FadeVideo } from "../ui/FadeVideo";
 
-export default function WorksMobileView({ tabs, activeTab, handleNextTab, handlePrevTab }: any) {
+interface TabContent {
+  id: number;
+  title: string;
+  tags: string[];
+  video?: string;
+  img?: string;
+  alt: string;
+  href: string;
+  description: string;
+}
+
+interface Tab {
+  id: number;
+  title: string;
+  content: TabContent[];
+}
+
+interface WorksMobileViewProps {
+  tabs: Tab[];
+  activeTab: Tab;
+  handleNextTab: () => void;
+  handlePrevTab: () => void;
+}
+
+export default function WorksMobileView({ tabs, activeTab, handleNextTab, handlePrevTab }: WorksMobileViewProps) {
   return (
     <section className="w-full space-y-36 md:hidden">
       <div className="flex flex-col items-end px-3 bg-gradient-to-r from-[#0e474d] from-0% to-[#853637] to-100% pt-4 pb-4 mt-4">

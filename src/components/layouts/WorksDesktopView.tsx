@@ -2,7 +2,30 @@ import { FadeImage } from "../ui/FadeImg";
 import { FadeText } from "../ui/FadeText";
 import { FadeVideo } from "../ui/FadeVideo";
 
-export default function WorksDesktopView({ tabs, activeTab, handleActiveTab }: any) {
+interface TabContent {
+  id: number;
+  title: string;
+  tags: string[];
+  video?: string;
+  img?: string;
+  alt: string;
+  href: string;
+  description: string;
+}
+
+interface Tab {
+  id: number;
+  title: string;
+  content: TabContent[];
+}
+
+interface WorksDesktopViewProps {
+  tabs: Tab[];
+  activeTab: Tab;
+  handleActiveTab: (id: number) => void;
+}
+
+export default function WorksDesktopView({ tabs, activeTab, handleActiveTab }: WorksDesktopViewProps) {
   return (
     <section className="hidden md:grid md:max-w-1/2 lg:max-w-[60%] w-full mx-auto grid-cols-3 bg-gradient-to-br from-[#0A7E8A] from-10% to-100% to-[rgb(240,92,98)] rounded-lg relative py-8 overflow-y-hidden">
       <aside className="absolute top-0 left-0 z-20 h-full overflow-y-auto py-10 pr-8 no-scrollbar">

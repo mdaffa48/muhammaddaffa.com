@@ -13,10 +13,10 @@ const billboards: Billboard[] = [
     id: 1,
     title: "Billboard Asia Afrika",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+1A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+1B",
+      "https://placehold.co/600x400?text=Billboard+1A",
+      "https://placehold.co/600x400?text=Billboard+1B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+1",
+    location: "https://placehold.co/600x400?text=Map+1",
     description:
       "Billboard strategis di kawasan Asia Afrika dengan lalu lintas padat.",
   },
@@ -24,10 +24,10 @@ const billboards: Billboard[] = [
     id: 2,
     title: "Billboard Dago",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+2A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+2B",
+      "https://placehold.co/600x400?text=Billboard+2A",
+      "https://placehold.co/600x400?text=Billboard+2B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+2",
+    location: "https://placehold.co/600x400?text=Map+2",
     description:
       "Terletak di jantung wisata Dago, cocok untuk promosi berbagai produk.",
   },
@@ -35,10 +35,10 @@ const billboards: Billboard[] = [
     id: 3,
     title: "Billboard Pasteur",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+3A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+3B",
+      "https://placehold.co/600x400?text=Billboard+3A",
+      "https://placehold.co/600x400?text=Billboard+3B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+3",
+    location: "https://placehold.co/600x400?text=Map+3",
     description:
       "Billboard dekat gerbang tol Pasteur, dilalui kendaraan luar kota.",
   },
@@ -46,10 +46,10 @@ const billboards: Billboard[] = [
     id: 4,
     title: "Billboard Setiabudi",
     images: [
-      "https://via.placeholder.com/400x250.png?text=Billboard+4A",
-      "https://via.placeholder.com/400x250.png?text=Billboard+4B",
+      "https://placehold.co/600x400?text=Billboard+4A",
+      "https://placehold.co/600x400?text=Billboard+4B",
     ],
-    location: "https://via.placeholder.com/400x250.png?text=Map+4",
+    location: "https://placehold.co/600x400?text=Map+4",
     description:
       "Area ramai mahasiswa dan wisatawan dengan visibilitas tinggi.",
   },

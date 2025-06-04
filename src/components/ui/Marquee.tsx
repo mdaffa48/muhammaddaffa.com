@@ -2,15 +2,13 @@ import { cn } from "../../lib/utils";
 
 interface MarqueeProps {
   className?: string;
-  reverse?: boolean;
-  pauseOnHover?: boolean;
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
-export default function Marquee({ className, reverse, pauseOnHover = false, children, vertical = false, repeat = 4, ...props }: MarqueeProps) {
+export default function Marquee({ className, children, vertical = false, repeat = 4, ...props }: MarqueeProps) {
   return (
     <div
       {...props}
@@ -31,8 +29,8 @@ export default function Marquee({ className, reverse, pauseOnHover = false, chil
             className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
               //   "animate-marquee flex-row": !vertical,
               //   "animate-marquee-vertical flex-col": vertical,
-              //   "group-hover:[animation-play-state:paused]": pauseOnHover,
-              //   "[animation-direction:reverse]": reverse,
+              //   "group-hover:[animation-play-state:paused]": false,
+              //   "[animation-direction:reverse]": false,
             })}
           >
             {children}

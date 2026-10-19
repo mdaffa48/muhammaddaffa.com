@@ -4,6 +4,8 @@ import App from "./App";
 import Works from "./components/page/Works";
 import Discord from "./components/page/Discord";
 import BillboardBandung from "./components/page/BillboardBandung";
+import Resume from "./components/page/Resume";
+import CaseStudy from "./components/page/CaseStudy";
 // import { useEffect } from "react";
 
 function AppWithNavbar() {
@@ -19,6 +21,8 @@ function AppWithNavbar() {
       <Routes>
         <Route index element={<App />} />
         <Route path="/works" element={<Works />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/resume/:slug" element={<CaseStudy />} />
         <Route path="/discord" element={<Discord />} />
         <Route path="/billboard-bandung" element={<BillboardBandung />} />
       </Routes>

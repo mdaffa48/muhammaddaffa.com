@@ -1,7 +1,6 @@
 import "./App.css";
 import Meteors from "./components/ui/Meteor";
 import OrbitingCircles from "./components/ui/Orbit";
-import resume from "./assets/pdf/resume_plugin.pdf";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
           <a href="/works" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
             minecraft works
           </a>
-          <a href={resume} target="_blank" rel="noopener noreferrer" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
+          <a href="/resume" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
             resume
           </a>
         </div>

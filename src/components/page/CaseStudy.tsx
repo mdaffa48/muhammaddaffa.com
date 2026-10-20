@@ -39,6 +39,7 @@ function EvidenceImage({ image, eager = false }: { image: CaseStudyImage; eager?
 export default function CaseStudy() {
   const { slug } = useParams();
   const study = caseStudies.find((entry) => entry.slug === slug);
+  const otherStudies = caseStudies.filter((entry) => entry.slug !== slug);
 
   useEffect(() => {
     const previousTitle = document.title;
@@ -58,11 +59,6 @@ export default function CaseStudy() {
 
         {study ? (
           <article className="mx-auto max-w-3xl pb-12 pt-16 sm:pt-24">
-            <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-white/65">
-              <p>{study.category}</p>
-              {study.year && <span>{study.year}</span>}
-              {study.draft && <span className="rounded-full border border-white/20 px-3 py-1">Draft</span>}
-            </div>
             <h1 className="unbounded text-3xl leading-snug sm:text-5xl sm:leading-snug">{study.title}</h1>
             <p className="mt-6 text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">{study.description}</p>
             {study.hero && (
@@ -101,8 +97,10 @@ export default function CaseStudy() {
               {study.sections.map((section) => (
                 <section key={section.heading} className="border-t border-white/15 pt-6">
                   <h2 className="text-2xl font-semibold leading-9">{section.heading}</h2>
-                  {section.body.split("\n\n").map((paragraph) => (
-                    <p key={paragraph} className="mt-4 text-lg leading-8 text-white/80">{paragraph}</p>
+                  {(section.content ?? section.body?.split("\n\n") ?? []).map((block) => (
+                    typeof block === "string"
+                      ? <p key={block} className="mt-4 text-lg leading-8 text-white/80">{block}</p>
+                      : <EvidenceImage key={block.src} image={block} />
                   ))}
                   {section.links?.map((link) => (
                     <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 text-base text-white/85 underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
@@ -144,6 +142,40 @@ export default function CaseStudy() {
               >
                 {study.link.label} <span aria-hidden="true">↗</span>
               </a>
+            )}
+            {otherStudies.length > 0 && (
+              <section aria-labelledby="more-case-studies" className="mt-16 border-t border-white/20 pt-8">
+                <h2 id="more-case-studies" className="mb-6 text-2xl font-semibold leading-9">More case studies</h2>
+                <div className="space-y-4">
+                  {otherStudies.map((other) => (
+                    <Link
+                      key={other.slug}
+                      to={`/resume/${other.slug}`}
+                      aria-label={`Read more about ${other.title}`}
+                      className="group flex flex-col gap-5 rounded-2xl border border-white/15 bg-white/[0.02] p-5 transition-colors hover:border-white/40 hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:flex-row sm:items-start"
+                    >
+                      {other.hero && (
+                        <img
+                          src={other.hero.src}
+                          alt={other.hero.alt}
+                          width={other.hero.width}
+                          height={other.hero.height}
+                          loading="lazy"
+                          decoding="async"
+                          className="aspect-video w-full shrink-0 rounded-xl object-cover sm:w-40"
+                        />
+                      )}
+                      <div className="min-w-0">
+                        <h3 className="unbounded text-lg leading-relaxed">{other.title}</h3>
+                        <p className="mt-3 text-base leading-7 text-white/75">{other.description}</p>
+                        <span className="mt-4 inline-flex min-h-11 items-center gap-3 text-base font-semibold underline-offset-4 group-hover:underline">
+                          Read more <span aria-hidden="true">↗</span>
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             )}
           </article>
         ) : (

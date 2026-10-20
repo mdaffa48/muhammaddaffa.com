@@ -14,23 +14,23 @@ export default function Resume() {
   return (
     <main className="manrope min-h-[100dvh] bg-[#131310] px-6 py-6 text-white sm:px-10 sm:py-8">
       <div className="mx-auto max-w-5xl">
-        <nav aria-label="Resume navigation" className="flex items-center justify-between gap-4">
+        <nav aria-label="Resume navigation">
+          <Link to="/" className="inline-flex min-h-11 items-center text-base text-white/75 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+            <span aria-hidden="true" className="mr-2">←</span> back
+          </Link>
+        </nav>
+
+        <header className="mb-8 flex items-center justify-between gap-4 border-b border-white/15 pb-8 pt-20 sm:pt-24">
+          <h1 id="case-studies-heading" className="unbounded min-w-0 text-2xl leading-tight sm:text-4xl lg:text-6xl">case studies</h1>
           <a
             href={cv}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Download CV (PDF, opens in a new tab)"
-            className="inline-flex min-h-11 items-center gap-3 rounded-full border border-white px-5 py-2 text-sm font-semibold transition-colors hover:bg-white hover:text-[#131310] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-white px-3 py-2 text-sm font-semibold transition-colors hover:bg-white hover:text-[#131310] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:gap-3 sm:px-5"
           >
             Download CV <span aria-hidden="true">↗</span>
           </a>
-          <Link to="/" className="inline-flex min-h-11 items-center text-sm text-white/70 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-            <span aria-hidden="true" className="mr-2">←</span> home
-          </Link>
-        </nav>
-
-        <header className="mb-8 border-b border-white/15 pb-8 pt-20 sm:pt-24">
-          <h1 id="case-studies-heading" className="unbounded text-4xl leading-tight sm:text-6xl">case studies</h1>
         </header>
 
         <section aria-labelledby="case-studies-heading">
@@ -50,6 +50,9 @@ export default function Resume() {
                 >
                   Read more <span aria-hidden="true">↗</span>
                 </Link>
+                <p className="mt-5 text-sm leading-6 text-white/65">
+                  Last updated: <time dateTime={study.lastUpdated}>{new Date(`${study.lastUpdated}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</time>
+                </p>
               </article>
             ))}
           </div>

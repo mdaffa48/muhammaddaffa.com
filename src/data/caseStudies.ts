@@ -22,6 +22,7 @@ interface CaseStudy {
   slug: string;
   title: string;
   category: string;
+  lastUpdated: string;
   year?: string;
   draft: boolean;
   description: string;
@@ -44,6 +45,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "minegens-nextgens",
     title: "Scaling MineGens through a viral launch",
     category: "Performance optimization",
+    lastUpdated: "2026-10-20",
     year: "2023–2024",
     draft: false,
     description:

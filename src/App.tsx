@@ -1,34 +1,68 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import Meteors from "./components/ui/Meteor";
 import OrbitingCircles from "./components/ui/Orbit";
+import HomeAtmosphere from "./components/ui/HomeAtmosphere";
+import MagneticLink from "./components/ui/MagneticLink";
+
+const email = "muhammaddaffa912@gmail.com";
 
 function App() {
+  const [copyStatus, setCopyStatus] = useState("");
+
+  useEffect(() => {
+    document.title = "Muhammad Daffa";
+  }, []);
+
+  useEffect(() => {
+    if (!copyStatus) return;
+    const timer = window.setTimeout(() => setCopyStatus(""), 3000);
+    return () => window.clearTimeout(timer);
+  }, [copyStatus]);
+
+  const copyEmail = async () => {
+    setCopyStatus("");
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopyStatus("Email copied!");
+    } catch {
+      setCopyStatus("Couldn't copy. Please select and copy the email.");
+    }
+  };
+
   return (
-    <main className="bg-[#131310] w-full relative overflow-hidden">
+    <HomeAtmosphere>
       <div className="relative">
         <Meteors />
       </div>
       <section className="min-h-[100dvh] flex flex-col items-center justify-center gap-10">
         <div className="titles text-center space-y-2">
           <h1 className="unbounded text-white text-5xl">muhammad daffa</h1>
-          <h2 className="manrope text-white text-xl md:text-2xl font-light tracking-wider">minecraft java plugin developer</h2>
+          <h2 className="manrope text-white text-xl md:text-2xl font-light tracking-wider">java developer</h2>
         </div>
-        <div className="buttons space-x-6">
-          <a href="/works" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
-            minecraft works
-          </a>
-          <a href="/resume" className="border-[1px] border-white px-4 py-1 rounded-full text-white text-lg font-semibold hover:bg-white hover:text-[#131310] transition duration-200">
-            resume
-          </a>
+        <div className="buttons flex flex-wrap items-center justify-center gap-4 px-4 sm:gap-6">
+          <span className="group relative inline-flex">
+            <button type="button" disabled aria-describedby="works-tooltip" className="min-h-11 cursor-not-allowed rounded-full border border-white/40 px-4 py-1 text-lg font-semibold text-white/40">
+              works
+            </button>
+            <span id="works-tooltip" role="tooltip" className="pointer-events-none invisible absolute bottom-full left-1/2 mb-3 -translate-x-1/2 whitespace-nowrap rounded-lg border border-white/20 bg-[#131310] px-3 py-2 text-sm text-white opacity-0 transition-opacity group-hover:visible group-hover:opacity-100">
+              work in progress
+            </span>
+          </span>
+          <MagneticLink href="/resume">resume</MagneticLink>
+          <MagneticLink href="https://blocksmith.studio" target="_blank" rel="noopener noreferrer">blocksmith</MagneticLink>
         </div>
 
         <div className="contact__info absolute left-0 right-0 md:left-6 bottom-6 md:bottom-4 flex flex-col md:flex-row items-center gap-3">
-          <figure className="flex items-center text-white/85 text-lg gap-2">
+          <div className="relative text-lg text-white/85">
+            <button type="button" onClick={copyEmail} aria-label={`Copy email address: ${email}`} title="Copy email address" className="flex min-h-11 items-center gap-2 rounded-sm text-left transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
               <path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm3.519 0L12 11.671L18.481 6zM20 7.329l-7.341 6.424a1 1 0 0 1-1.318 0L4 7.329V18h16z" />
             </svg>
-            <p id="email__mobile">muhammaddaffa912@gmail.com</p>
-          </figure>
+              <span className="select-text">{email}</span>
+            </button>
+            <span role="status" aria-live="polite" className="pointer-events-none absolute bottom-full left-0 mb-2 max-w-[calc(100vw-3rem)] text-sm leading-6 text-white/85">{copyStatus}</span>
+          </div>
 
           <figure className="flex items-center text-white/85 text-lg gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
@@ -50,7 +84,7 @@ function App() {
       </section>
 
       {/* <p className="text-white text-lg pl-4 mt-10 absolute left-2 bottom-4">hi@ikhlasdansantai.dev</p> */}
-    </main>
+    </HomeAtmosphere>
   );
 }
 

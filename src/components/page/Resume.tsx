@@ -6,7 +6,7 @@ import { caseStudies } from "../../data/caseStudies";
 export default function Resume() {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Case Studies | Muhammad Daffa";
+    document.title = "Resume | Muhammad Daffa";
     window.scrollTo(0, 0);
     return () => { document.title = previousTitle; };
   }, []);
@@ -37,10 +37,17 @@ export default function Resume() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((study) => (
               <article key={study.slug} className="flex flex-col items-start rounded-2xl border border-white/15 bg-white/[0.02] p-5">
-                <div className="mb-6 flex w-full flex-wrap items-center justify-between gap-3 text-sm text-white/65">
-                  <p>{study.category}{study.year && ` · ${study.year}`}</p>
-                  {study.draft && <span className="rounded-full border border-white/20 px-3 py-1">Draft</span>}
-                </div>
+                {study.hero && (
+                  <img
+                    src={study.hero.src}
+                    alt={study.hero.alt}
+                    width={study.hero.width}
+                    height={study.hero.height}
+                    loading="lazy"
+                    decoding="async"
+                    className="mb-5 aspect-video w-full rounded-xl object-cover"
+                  />
+                )}
                 <h2 className="unbounded text-lg leading-relaxed">{study.title}</h2>
                 <p className="mb-6 mt-3 text-base leading-7 text-white/80">{study.description}</p>
                 <Link
